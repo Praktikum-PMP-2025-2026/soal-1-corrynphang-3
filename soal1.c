@@ -16,6 +16,11 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
  #include <stdio.h>
  void cek(int *angka,int jumlah){
     int max=0;
+    if (jumlah==1){
+        if (*angka== -1){
+            *angka=0;
+        }  
+    }
     if (*angka == -1){
         int i=1;
         while (*angka == -1){
@@ -31,6 +36,9 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
         while (*(angka+i)== -1){
             if (*(angka+n)!= -1){
                 *(angka+i)= (*(angka+i-1)+*(angka+n))/2;
+            }
+            if (*(angka+jumlah-1)== -1){
+                *(angka+jumlah-1)=*(angka+jumlah-2);
             }
             n++;
         }
