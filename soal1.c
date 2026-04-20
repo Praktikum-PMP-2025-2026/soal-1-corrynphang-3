@@ -37,7 +37,7 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
     for (int i=0; i<jumlah;i++){
         max+=*(angka+i);
     }
-    printf("\nRECOVERED ");
+    printf("RECOVERED ");
     for (int i=0; i<jumlah;i++){
         printf("%d ",*(angka+i));
     }
