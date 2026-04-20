@@ -40,7 +40,7 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
     printf("\nRECOVERED ");
     for (int i=0; i<jumlah;i++){
         printf("%d",*(angka+i));
-        if (i<=jumlah-1){
+        if (i<jumlah-1){
             printf(" ");
         }
     }
