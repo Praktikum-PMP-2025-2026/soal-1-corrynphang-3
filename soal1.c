@@ -20,9 +20,10 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
         int i=1;
         while (*angka == -1){
             if (*(angka+i) != -1){
-                *angka= *(angka+i)/2;
+                *angka= *(angka+i);
+            }else{
+                i++;
             }
-            i++;
         }
     }
     for (int i=1; i<jumlah;i++){
