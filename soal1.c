@@ -23,12 +23,15 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
     }
     if (*angka == -1){
         int i=1;
-        while (*angka == -1){
+        while (*angka == -1 && i<jumlah){//sama yang ini
             if (*(angka+i) != -1){
                 *angka= *(angka+i);
             }else{
                 i++;
             }
+        }
+        if (*angka ==-1){
+            *angka =0;
         }
     }
     for (int i=1; i<jumlah;i++){
@@ -41,16 +44,19 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
                     }else{
                     *(angka+i)= (*(angka+i-1)+*(angka+n))/2;
                     }
+                    break;//aku nambahin ini yah ko
                     
                     
                 }else if (*(angka+n)==-1 && n==jumlah-1){
                     *(angka+i)= *(angka+i-1);
+                    break;//sama nambahin yang ini juga
+                }else{
+                    n++;
                 }
             }
             if (*(angka+jumlah-1)== -1){
                 *(angka+jumlah-1)=*(angka+jumlah-2);
             }
-            n++;
         }
     }
     int curr;
@@ -74,6 +80,7 @@ Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum.
         }
     }
     printf("\nMAX_SUM %d",max);
+
  }
  int main(){
     int N;
